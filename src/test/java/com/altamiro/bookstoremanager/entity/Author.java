@@ -1,6 +1,10 @@
 package com.altamiro.bookstoremanager.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTest;
 
 import javax.persistence.*;
@@ -21,4 +25,8 @@ public class Author {
 
     @Column(nullable = false)
     private Integer age;
+
+    public Object getName() {
+        return name;
+    }
 }
